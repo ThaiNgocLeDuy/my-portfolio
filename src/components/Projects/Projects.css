@@ -1,0 +1,96 @@
+#project {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+#project .project_list {
+  width: 100%;
+  display: flex;
+  
+  flex-direction: column;
+}
+
+#project .card-wrapper {
+  width: 800px;
+  height: 500px;
+  position: relative;
+}
+
+#project .card-wrapper .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 450px;
+
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#project .card-wrapper .card .card-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+
+  height: 100%;
+  z-index: 2;
+  background-color: #000;
+  transition: 0.5s;
+}
+
+#project .card-wrapper .card .card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover img {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.card:hover .card-image {
+  width: 500px;
+  transform: translateY(-100px);
+  transition: all 0.9s;
+}
+
+.project_list .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+
+  width: 100%;
+  height: 135px;
+  z-index: 1;
+  padding: 10px;
+}
+
+.project_list .details h2 {
+  margin: 30px 0;
+  padding: 0;
+  text-align: center;
+  color: black;
+}
+
+.project_list .details h2 .job-title {
+  font-size: 30px;
+  color: #333;
+  font-weight: 300;
+}
+
+.project_list .details .job-title span {
+    color: black;
+}
